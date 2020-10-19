@@ -3,10 +3,13 @@
  * include Vue and Vue Resource. This gives a great starting point for
  * building robust, powerful web applications using Vue and Laravel.
  */
+import utils from './helpers/utilities'
 import router from './router.js'
 import store from './store/index'
 
 require('./bootstrap')
+
+window.Vue.prototype.$utils = utils
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

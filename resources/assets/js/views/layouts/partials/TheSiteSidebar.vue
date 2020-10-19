@@ -18,6 +18,7 @@
             :title="item.title"
             :key="index"
             :active="item.active"
+            @click.native="Toggle"
           />
         </sw-list-group>
         <sw-list-item
@@ -26,6 +27,7 @@
           tag-name="router-link"
           :to="menuGroups.route"
           :active="menuGroups.active"
+          @click.native="Toggle"
         >
           <span slot="icon" v-html="menuGroups.icon" />
         </sw-list-item>
@@ -49,28 +51,28 @@ export default {
           items: [
             {
               title: 'Cards',
-              route: '/basic-ui/cards',
+              route: '/admin/basic-ui/cards',
               active: false
             },
             {
               title: 'Tables',
-              route: '/basic-ui/tables',
+              route: '/admin/basic-ui/tables',
               active: false
             },
             {
               title: 'Typography',
-              route: '/basic-ui/typography',
+              route: '/admin/basic-ui/typography',
               active: false
             },
             {
               title: 'Tabs',
-              route: '/basic-ui/tabs',
+              route: '/admin/basic-ui/tabs',
               active: false
               
             },
             {
               title: 'Modals',
-              route: '/basic-ui/modals',
+              route: '/admin/basic-ui/modals',
               active: false
             },
             
@@ -85,22 +87,22 @@ export default {
           items: [
             {
               title: 'Button',
-              route: '/form/buttons',
+              route: '/admin/form/buttons',
               active: false
             },
             {
               title: 'General Elements',
-              route: '/form/general-elements',
+              route: '/admin/form/general-elements',
               active: false
             },
             {
               title: 'Advanced Elements',
-              route: '/form/advanced-elements',
+              route: '/admin/form/advanced-elements',
               active: false
             },
             {
               title: 'Form Layout',
-              route: '/form/form-layout',
+              route: '/admin/form/form-layout',
               active: false
             }
           ]
@@ -114,37 +116,37 @@ export default {
           items: [
             {
               title: 'File Upload',
-              route: '/components/file-upload',
+              route: '/admin/components/file-upload',
               active: false
             },
             {
               title: 'Badges',
-              route: '/components/badges',
+              route: '/admin/components/badges',
               active: false
             },
             {
               title: 'List',
-              route: '/components/list',
+              route: '/admin/components/list',
               active: false
             },
             {
               title: 'Editors',
-              route: '/components/editors',
+              route: '/admin/components/editors',
               active: false
             },
             {
               title: 'Wizards',
-              route: '/components/wizards',
+              route: '/admin/components/wizards',
               active: false
             },
             {
               title: 'Dropdown',
-              route: '/components/dropdown',
+              route: '/admin/components/dropdown',
               active: false
             },
             {
               title: 'Popup',
-              route: '/components/popup',
+              route: '/admin/components/popup',
               active: false
             }
           ]
@@ -167,6 +169,9 @@ export default {
     this.setActiveItem()
   },
   methods: {
+    Toggle() {
+      this.$utils.toggleSidebar()
+    },
     setActiveItem() {
       this.menu.forEach(item => {
         item.active = false
@@ -186,7 +191,6 @@ export default {
       })
     },
     setActiveGroup(index) {
-      alert(index)
       if (index == null || index == undefined) {
         return false
       }
