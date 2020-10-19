@@ -1,4 +1,13 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
+const tailwindcss = require('tailwindcss')
+
+mix.webpackConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'resources/assets/js')
+    }
+  }
+})
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +20,20 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+  .js('resources/assets/js/app.js', 'public/assets/js/')
+  .sass('resources/assets/sass/app.scss', 'public/assets/css/')
+  .options({
+    processCssUrls: false,
+    postCss: [tailwindcss('./tailwind.config.js')]
+  })
+
+if (!mix.inProduction()) {
+  mix
+    .webpackConfig({
+      devtool: 'source-map'
+    })
+    .sourceMaps()
+} else {
+  mix.version()
+}
