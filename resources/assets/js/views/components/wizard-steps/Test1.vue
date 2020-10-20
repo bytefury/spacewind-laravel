@@ -1,11 +1,7 @@
 <template>
-  <div>
+  <div class="w-3/4">
     <sw-card>
-      <h3 class="mb-5 sw-section-title md:mb-5 sm:mb-5">
-        Step 1
-      </h3>
-
-      <div class="grid grid-cols-3 gap-4 mb-6">
+      <div class="grid grid-cols-1 gap-4 mb-6 md:grid-cols-2">
         <sw-input-group label="Name">
           <sw-input />
         </sw-input-group>

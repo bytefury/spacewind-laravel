@@ -1,18 +1,18 @@
 <template>
   <div>
-    <sw-page-header title="File Upload">
+    <sw-page-header title="File Uploads">
       <template v-slot:breadcrumbs>
         <sw-breadcrumb>
           <sw-breadcrumb-item title="Home" />
-          <sw-breadcrumb-item title="Components" to="/components/file-upload" />
-          <sw-breadcrumb-item title="File Upload" active />
+          <sw-breadcrumb-item title="Components" to="/admin/components/file-uploads" />
+          <sw-breadcrumb-item title="File Uploads" active />
         </sw-breadcrumb>
       </template>
     </sw-page-header>
 
     <sw-card>
       <template v-slot:header>
-        <span class="sw-section-title">Avtar Upload</span>
+        <span class="sw-section-title">Avatar Upload</span>
       </template>
       <div class="grid grid-cols-1 gap-5 sm:grid-cols-1 xl:grid-cols-2">
        <sw-avatar
@@ -38,7 +38,7 @@
     </sw-card>
     <sw-card class="mt-5">
       <template v-slot:header>
-        <span class="sw-section-title">Multiple File Upload with Drag and Drop</span>
+        <span class="sw-section-title">Drag & Drop Uploader</span>
       </template>
       <div class="w-full">
         <sw-file-upload

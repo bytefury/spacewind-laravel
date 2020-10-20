@@ -58,7 +58,7 @@
     <sw-card class="my-4">
       <template v-slot:header>
         <h3 class="sw-section-title">
-          Variant
+          Variants
         </h3>
       </template>
       <div class="flex flex-col mb-5 space-y-4">

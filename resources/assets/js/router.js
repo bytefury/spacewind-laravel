@@ -25,16 +25,16 @@ import Modals from './views/basic-ui/Modals.vue'
 import Buttons from './views/form/Buttons.vue'
 import GeneralElements from './views/form/GeneralElements.vue'
 import AdvancedElements from './views/form/AdvancedElements.vue'
-import FormLayout from './views/form/FormLayout.vue'
+import FormLayouts from './views/form/FormLayouts.vue'
 
 // components
 import Badges from './views/components/Badges.vue'
-import List from './views/components/List.vue'
-import FileUpload from './views/components/FileUpload.vue'
-import Dropdown from './views/components/Dropdown.vue'
+import Lists from './views/components/Lists.vue'
+import FileUploads from './views/components/FileUploads.vue'
+import Dropdowns from './views/components/Dropdowns.vue'
 import Editors from './views/components/Editors.vue'
 import Wizards from './views/components/Wizards.vue'
-import Popup from './views/components/Popup.vue'
+import Popups from './views/components/Popups.vue'
 
 // Auth
 import Login from './views/auth/Login.vue'
@@ -105,38 +105,38 @@ const routes = [
         component: AdvancedElements
       },
       {
-        path: 'form/form-layout',
-        component: FormLayout
+        path: 'form/form-layouts',
+        component: FormLayouts
       },
 
       // components
       {
-        path: 'components/list',
-        component: List
+        path: 'components/lists',
+        component: Lists
       },
       {
         path: 'components/badges',
         component: Badges
       },
       {
-        path: 'components/file-upload',
-        component: FileUpload
+        path: 'components/file-uploads',
+        component: FileUploads
       },
       {
         path: 'components/editors',
         component: Editors
       },
       {
-        path: 'components/dropdown',
-        component: Dropdown
+        path: 'components/dropdowns',
+        component: Dropdowns
       },
       {
         path: 'components/wizards',
         component: Wizards
       },
       {
-        path: 'components/popup',
-        component: Popup
+        path: 'components/popups',
+        component: Popups
       }
     ]
   },

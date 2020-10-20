@@ -4,35 +4,36 @@
       <template v-slot:breadcrumbs>
         <sw-breadcrumb>
           <sw-breadcrumb-item title="Home" to="/dashboard" />
-          <sw-breadcrumb-item title="Components" to="/components/file-upload" />
+          <sw-breadcrumb-item title="Components" to="/admin/components/file-uploads" />
           <sw-breadcrumb-item title="Wizards" active />
         </sw-breadcrumb>
       </template>
     </sw-page-header>
 
-    <sw-card class="md:mt-5">
+    <!-- <sw-card class="md:mt-5">
       <template v-slot:header>
         <h3 class="sw-section-title">
           Wizard Step
         </h3>
-      </template>
+      </template> -->
 
-      <div class="flex items-center justify-center w-full">
+      <!-- <div class="flex items-center justify-center w-full">
         <img
           id="logo-crater"
           src="https://demo.craterapp.com/assets/img/crater-logo.png"
           alt="Crater Logo"
           class="h-12 mt-2"
         />
-      </div>
+      </div> -->
       <sw-wizard
         :steps="3"
         :currentStep.sync="wizardStep"
+        allow-navigation-redirect
         @submit="submitWizard"
       >
         <component :is="tab" @next="setNextTab()" @back="setBackTab()" />
       </sw-wizard>
-    </sw-card>
+    <!-- </sw-card> -->
   </div>
 </template>
 

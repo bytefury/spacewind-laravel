@@ -4,7 +4,7 @@
       <template v-slot:breadcrumbs>
         <sw-breadcrumb>
           <sw-breadcrumb-item title="Home" to="/dashboard" />
-          <sw-breadcrumb-item title="Components" to="/components/file-upload" />
+          <sw-breadcrumb-item title="Components" to="/admin/components/file-uploads" />
           <sw-breadcrumb-item title="Badges" active />
         </sw-breadcrumb>
       </template>

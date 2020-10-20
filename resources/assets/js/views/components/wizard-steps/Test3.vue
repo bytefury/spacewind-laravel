@@ -1,9 +1,6 @@
 <template>
-  <div>
+  <div class="w-3/4">
     <sw-card>
-      <h3 class="mb-5 sw-section-title md:mb-5 sm:mb-5">
-        Congratulation Your account has been successfully created.
-      </h3>
       <div class="flex justify-center">
         <svg
           class="h-full text-blue-500"

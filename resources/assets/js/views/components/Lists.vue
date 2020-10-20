@@ -1,11 +1,11 @@
 <template>
   <div>
-    <sw-page-header title="List">
+    <sw-page-header title="Lists">
       <template v-slot:breadcrumbs>
         <sw-breadcrumb>
           <sw-breadcrumb-item title="Home" />
-          <sw-breadcrumb-item title="Components" to="/components/file-upload" />
-          <sw-breadcrumb-item title="List" active />
+          <sw-breadcrumb-item title="Components" to="/admin/components/file-uploads" />
+          <sw-breadcrumb-item title="Lists" active />
         </sw-breadcrumb>
       </template>
     </sw-page-header>

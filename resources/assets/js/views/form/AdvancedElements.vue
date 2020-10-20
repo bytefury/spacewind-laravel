@@ -25,7 +25,7 @@
             :show-labels="false"
             :allow-empty="true"
             :multiple="false"
-            placeholder="select a value "
+            placeholder="select a value"
           />
         </sw-input-group>
         <sw-input-group label="Multi Select">
@@ -36,7 +36,7 @@
             :show-labels="false"
             :allow-empty="true"
             :multiple="true"
-            placeholder="select a value "
+            placeholder="select a value"
           />
         </sw-input-group>
       </div>

@@ -20,6 +20,20 @@
           class="block h-10 md:hidden"
         />
       </a>
+      <a
+        href="#"
+        class="block ml-3 text-sm text-black bg-white rounded md:hidden focus:text-black visited:text-black active:text-black md:ml-0"
+        style="line-height: 9px; padding: 6px"
+        @click="onNavToggle"
+      >
+        <div
+          class="inline-block m-0 overflow-visible normal-case ease-linear bg-transparent border-0 cursor-pointer hamburger hamburger--arrowturn"
+        >
+          <div class="relative inline-block w-6 h-6">
+            <div class="block hamburger-inner top-1/2" />
+          </div>
+        </div>
+      </a>
     </div>
     <ul class="float-right h-8 m-0 list-none" style="height: 36px">
       <li class="relative block float-left px-1 py-0 m-0">
@@ -42,3 +56,12 @@
     </ul>
   </div>
 </template>
+<script>
+export default {
+  methods: {
+    onNavToggle() {
+      this.$utils.toggleSidebar()
+    },
+  }
+}
+</script>

@@ -86,7 +86,7 @@ export default {
           active: false,
           items: [
             {
-              title: 'Button',
+              title: 'Buttons',
               route: '/admin/form/buttons',
               active: false
             },
@@ -101,8 +101,8 @@ export default {
               active: false
             },
             {
-              title: 'Form Layout',
-              route: '/admin/form/form-layout',
+              title: 'Form Layouts',
+              route: '/admin/form/form-layouts',
               active: false
             }
           ]
@@ -115,8 +115,8 @@ export default {
           active: false,
           items: [
             {
-              title: 'File Upload',
-              route: '/admin/components/file-upload',
+              title: 'File Uploads',
+              route: '/admin/components/file-uploads',
               active: false
             },
             {
@@ -125,8 +125,8 @@ export default {
               active: false
             },
             {
-              title: 'List',
-              route: '/admin/components/list',
+              title: 'Lists',
+              route: '/admin/components/lists',
               active: false
             },
             {
@@ -140,13 +140,13 @@ export default {
               active: false
             },
             {
-              title: 'Dropdown',
-              route: '/admin/components/dropdown',
+              title: 'Dropdowns',
+              route: '/admin/components/dropdowns',
               active: false
             },
             {
-              title: 'Popup',
-              route: '/admin/components/popup',
+              title: 'Popups',
+              route: '/admin/components/popups',
               active: false
             }
           ]
@@ -170,7 +170,7 @@ export default {
   },
   methods: {
     Toggle() {
-      this.$utils.toggleSidebar()
+      // this.$utils.toggleSidebar()
     },
     setActiveItem() {
       this.menu.forEach(item => {
@@ -202,3 +202,19 @@ export default {
   }
 }
 </script>
+<style lang="scss">
+.mobile-menu-overlay {
+  background: rgba(48, 75, 88, 0.5);
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-open .sidebar-left {
+    left: 0;
+  }
+
+  .sidebar-open .mobile-menu-overlay {
+    display: block;
+  }
+}
+</style>
