@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\Mobile\LoginController;
+use App\Http\Controllers\Auth\Mobile\LogoutController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
+
+// Authentication & Password Reset
+//----------------------------------
+
+Route::group(['prefix' => 'auth'], function () {
+
+    Route::post('login', LoginController::class);
+
+    Route::post('logout', LogoutController::class);
+
+});
+
+
+// Get authenticated user
+//----------------------------------
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });

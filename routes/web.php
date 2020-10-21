@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\Auth\Spa\LoginController;
+use App\Http\Controllers\Auth\Spa\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::post('login', LogoutController::class);
+Route::post('login', LoginController::class);
 
 Route::get('logout', LogoutController::class);
 
