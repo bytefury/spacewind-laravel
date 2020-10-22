@@ -52,19 +52,7 @@
           <div
             class="text-lg not-italic font-medium leading-5 tracking-wide text-black md:col-span-1 sm:mb-4"
           >
-            Text With Icon
-          </div>
-          <div class="md:col-span-2">
-            <sw-input-group label="Right icon" class="mt-5 md:mt-0">
-              <sw-input
-                type="text"
-                name="right-icon"
-              >
-                <template v-slot:rightIcon>
-                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </template>
-              </sw-input>
-            </sw-input-group>
+            Text with icon
           </div>
           <div class="md:col-span-2">
             <sw-input-group label="Left icon" class="mt-5 md:mt-0">
@@ -74,6 +62,18 @@
               >
                 <template v-slot:leftIcon>
                     <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z" clip-rule="evenodd"></path></svg>
+                </template>
+              </sw-input>
+            </sw-input-group>
+          </div>
+          <div class="md:col-span-2">
+            <sw-input-group label="Right icon" class="mt-5 md:mt-0">
+              <sw-input
+                type="text"
+                name="right-icon"
+              >
+                <template v-slot:rightIcon>
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </template>
               </sw-input>
             </sw-input-group>
