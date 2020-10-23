@@ -11,7 +11,7 @@
 		</sw-page-header>
 		<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
 			<!-- Basic Form -->
-			<sw-card class="my-4">
+			<!-- <sw-card class="my-4">
 				<template v-slot:header>
 					<span class="sw-section-title">Basic Form</span>
 				</template>
@@ -60,10 +60,10 @@
 					</sw-input>
 				</sw-input-group>
 				<sw-button class="mt-3">Submit</sw-button>
-			</sw-card>
+			</sw-card> -->
 
 			<!-- Horizontal Form -->
-			<sw-card class="my-4">
+			<!-- <sw-card class="my-4">
 				<template v-slot:header>
 					<span class="sw-section-title">Horizontal Form</span>
 				</template>
@@ -101,7 +101,7 @@
 					</sw-input>
 				</sw-input-group>
 				<sw-button variant="success" class="mt-3">Save</sw-button>
-			</sw-card>
+			</sw-card> -->
 		</div>
 
 		<sw-card class="my-4">
@@ -135,9 +135,9 @@
 				<sw-button class="ml-2">Confirm identity</sw-button>
 			</div>
 		</sw-card>
-		<!-- <div> -->
+		<div>
 			<!-- Simple Layout -->
-			<!-- <sw-card class="my-4">
+			<sw-card class="my-4">
 				<template v-slot:header>
 					<span class="sw-section-title">Simple Layout</span>
 				</template>
@@ -194,10 +194,10 @@
 						<sw-button variant="primary-outline">Cancel</sw-button>
 					</div>
 				</template>
-			</sw-card> -->
+			</sw-card>
 
 			<!-- Column Layout -->
-			<!-- <sw-card class="my-4">
+			<sw-card class="my-4">
 				<template v-slot:header>
 					<span class="sw-section-title">Column Layout</span>
 				</template>
@@ -303,31 +303,28 @@
 						<sw-button variant="primary-outline">Cancel</sw-button>
 					</div>
 				</template>
-			</sw-card> -->
+			</sw-card>
 
 			<!-- Horizontal Layout -->
-			<!-- <sw-card class="my-4">
+			<sw-card class="my-4">
 				<template v-slot:header>
 					<span class="sw-section-title">Horizontal Layout</span>
 				</template>
 				<div class="grid grid-cols-1 gap-4 md:grid-cols-5">
-					<div class="col-span-1">
-						<span class="font-semibold">Basic Details</span>
-					</div>
 					<div class="col-span-4">
-						<sw-input-group variant="horizontal" label="First Name" class="mt-2">
+						<sw-input-group variant="horizontal" label="First Name" class="my-10">
 							<sw-input />
 						</sw-input-group>
-						<sw-input-group variant="horizontal" label="Last Name" class="mt-2">
+						<sw-input-group variant="horizontal" label="Last Name" class="my-10">
 							<sw-input />
 						</sw-input-group>
-						<sw-input-group variant="horizontal" label="Surname" class="mt-2">
+						<sw-input-group variant="horizontal" label="Surname" class="my-10">
 							<sw-input />
 						</sw-input-group>
-						<sw-input-group variant="horizontal" label="Email" class="mt-2">
-							<sw-input type="email"/>
+						<sw-input-group variant="horizontal" label="Email" class="my-10">
+							<sw-input type="email" class="w-64"/>
 						</sw-input-group>
-						<sw-input-group variant="horizontal" label="Phone Number" class="mt-2">
+						<sw-input-group variant="horizontal" label="Phone Number" class="my-10">
 							<sw-input>
 								<template v-slot:leftIcon>
 									<svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
@@ -336,16 +333,13 @@
 								</template>
 							</sw-input>
 						</sw-input-group>
-						<sw-input-group variant="horizontal" label="Register No." class="mt-2">
+						<sw-input-group variant="horizontal" label="Register No." class="my-10">
 							<sw-input prefix="REG" />
 						</sw-input-group>
 					</div>
 				</div>
-				<sw-divider class="my-10"/>
-				<div class="grid grid-cols-1 gap-4 md:grid-cols-5">
-					<div class="col-span-1">
-						<span class="font-semibold">Educational Details</span>
-					</div>
+				<!-- <sw-divider class="my-10"/>
+				<div class="flex grid grid-cols-1 gap-4 md:inline justify-items-center md:grid-cols-5">
 					<div class="col-span-4">
 						<sw-input-group variant="horizontal" label="School Name" class="mt-2">
 							<sw-input />
@@ -366,7 +360,7 @@
 							<sw-input />
 						</sw-input-group>
 					</div>
-				</div>
+				</div> -->
 				<template v-slot:footer>
 					<div class="flex justify-end">
 						<sw-button variant="primary-outline" class="mr-2">
@@ -378,8 +372,8 @@
 						<sw-button variant="primary-outline">Cancel</sw-button>
 					</div>
 				</template>
-			</sw-card> -->
-		<!-- </div> -->
+			</sw-card>
+		</div>
 	</div>
 </template>
 <script>
