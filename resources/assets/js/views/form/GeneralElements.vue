@@ -12,95 +12,164 @@
 
 
     <sw-card class="md:mt-5">
-      <template v-slot:header>
-        <span class="sw-section-title">Vertical Basic Inputs</span>
-      </template>
-      <div
-        class="grid gap-5 mt-4 grid:cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 sm:mt-4 md:mt-4"
-      >
-        <sw-input-group label="Text">
-          <sw-input />
-        </sw-input-group>
 
-        <sw-input-group label="Password">
-          <sw-input :type="getInputType">
-            <template v-slot:rightIcon>
-              <svg v-if="isShowPassword" class="w-5 h-5 mr-1 text-gray-500 cursor-pointer" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" @click="isShowPassword = !isShowPassword">
-                <path fill-rule="evenodd" d="M3.707 2.293a1 1 0 00-1.414 1.414l14 14a1 1 0 001.414-1.414l-1.473-1.473A10.014 10.014 0 0019.542 10C18.268 5.943 14.478 3 10 3a9.958 9.958 0 00-4.512 1.074l-1.78-1.781zm4.261 4.26l1.514 1.515a2.003 2.003 0 012.45 2.45l1.514 1.514a4 4 0 00-5.478-5.478z" clip-rule="evenodd"></path><path d="M12.454 16.697L9.75 13.992a4 4 0 01-3.742-3.741L2.335 6.578A9.98 9.98 0 00.458 10c1.274 4.057 5.065 7 9.542 7 .847 0 1.669-.105 2.454-.303z"></path>
-              </svg>
-              <svg
-                v-else
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                class="w-5 h-5 mr-1 text-gray-500 cursor-pointer"
-                @click="isShowPassword = !isShowPassword"
+        <div class="mb-8 md:grid md:grid-cols-5 md:gap-4">
+            <div
+                class="text-lg not-italic font-medium leading-5 tracking-wide text-black md:col-span-1 sm:mb-4"
+            >
+                <span class="sw-section-title">Input Text</span>
+            </div>
+
+          <div class="md:col-span-2">
+            <sw-input-group
+              label="Text"
+              class="mt-5 md:mt-0"
+            >
+              <sw-input
+                focus
+                type="text"
+                name="name"
+              />
+            </sw-input-group>
+          </div>
+          <div class="md:col-span-2">
+            <sw-input-group
+              label="Password"
+              class="mt-5 md:mt-0"
+            >
+              <sw-input
+                label="Password"
+                type="password"
+                tab-index="2"
+              />
+            </sw-input-group>
+          </div>
+        </div>
+
+        <sw-divider class="mb-5 md:mb-8" />
+
+        <div class="mb-8 md:grid md:grid-cols-5 md:gap-4">
+          <div
+            class="text-lg not-italic font-medium leading-5 tracking-wide text-black md:col-span-1 sm:mb-4"
+          >
+            Text with icon
+          </div>
+          <div class="md:col-span-2">
+            <sw-input-group label="Left icon" class="mt-5 md:mt-0">
+              <sw-input
+                type="text"
+                name="left-icon"
               >
-                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
-                <path
-                  fill-rule="evenodd"
-                  d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"
-                  clip-rule="evenodd"
-                ></path>
-              </svg>
-            </template>
-          </sw-input>
-        </sw-input-group>
+                <template v-slot:leftIcon>
+                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z" clip-rule="evenodd"></path></svg>
+                </template>
+              </sw-input>
+            </sw-input-group>
+          </div>
+          <div class="md:col-span-2">
+            <sw-input-group label="Right icon" class="mt-5 md:mt-0">
+              <sw-input
+                type="text"
+                name="right-icon"
+              >
+                <template v-slot:rightIcon>
+                    <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </template>
+              </sw-input>
+            </sw-input-group>
+          </div>
+        </div>
 
-        <sw-input-group label="Feedback">
-          <sw-textarea row="2" />
-        </sw-input-group>
-      </div>
-    </sw-card>
+        <sw-divider class="mb-5 md:mb-8" />
 
-    <sw-card class="md:mt-10">
-      <template v-slot:header>
-        <span class="sw-section-title">Validation states</span>
-      </template>
-      <div
-        class="grid gap-5 grid:cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1"
-      >
-        <sw-input-group label="Valid">
-          <sw-input variant="success" />
-        </sw-input-group>
-        <sw-input-group label="Invalid">
-          <sw-input variant="danger" />
-        </sw-input-group>
-      </div>
-    </sw-card>
+        <div class="mb-8 md:grid md:grid-cols-5 md:gap-4">
+          <div
+            class="text-lg not-italic font-medium leading-5 tracking-wide text-black md:col-span-1 sm:mb-4"
+          >
+            Prefix input
+          </div>
+          <div class="md:col-span-2">
+            <sw-input-group label="Prefix" class="mt-5 md:mt-0">
+              <sw-input
+                prefix="GST"
+                type="text"
+                name="right-icon"
+              />
+            </sw-input-group>
+          </div>
+        </div>
 
-    <sw-card class="md:mt-10">
-      <template v-slot:header>
-        <span class="sw-section-title">Checkbox and Radio Buttons</span>
-      </template>
-      <div
-        class="grid grid-cols-1 gap-5 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3"
-      >
-        <sw-input-group label="Checkbox">
-          <sw-checkbox label="small" variant="success" size="sm" />
-          <sw-checkbox label="default" />
-          <sw-checkbox label="large" variant="danger" size="lg" />
-        </sw-input-group>
-        <sw-input-group label="Radio">
-          <sw-radio
-            label="Radio 1"
-            name="Radio 1"
-            value="Radio 1"
-            size="sm"
-            variant="success"
-          />
-          <sw-radio label="Radio 2" name="Radio 1" value="Radio 2" />
-          <sw-radio
-            label="Radio 3"
-            name="Radio 1"
-            value="Radio 3"
-            size="lg"
-            variant="danger"
-          />
-        </sw-input-group>
-        <sw-input-group label="Toggle">
-          <sw-switch />
-        </sw-input-group>
-      </div>
+        <sw-divider class="mb-5 md:mb-8" />
+
+        <div class="mb-8 md:grid md:grid-cols-5 md:gap-4">
+          <div
+            class="text-lg not-italic font-medium leading-5 tracking-wide text-black md:col-span-1 sm:mb-4"
+          >
+            Validation
+          </div>
+          <div class="md:col-span-2">
+                <sw-input-group label="Valid" class="mt-5 md:mt-0">
+                    <sw-input variant="success" />
+                </sw-input-group>
+            </div>
+          <div class="md:col-span-2">
+            <sw-input-group label="Invalid" class="mt-5 md:mt-0">
+                <sw-input variant="danger" />
+            </sw-input-group>
+          </div>
+        </div>
+
+        <sw-divider class="mb-5 md:mb-8" />
+
+        <div class="mb-8 md:grid md:grid-cols-5 md:gap-4">
+            <div
+                class="text-lg not-italic font-medium leading-5 tracking-wide text-black md:col-span-1 sm:mb-4"
+            >
+                Radio & Checkbox
+            </div>
+            <div class="md:col-span-2">
+                <sw-input-group label="Checkbox" class="mt-5 md:mt-0">
+                    <sw-checkbox label="Small" variant="success" size="sm" />
+                    <sw-checkbox label="Medium" />
+                    <sw-checkbox label="Large" variant="danger" size="lg" />
+                </sw-input-group>
+            </div>
+            <div class="md:col-span-2">
+                <sw-input-group label="Radio" class="mt-5 md:mt-0">
+                    <sw-radio
+                        label="Small"
+                        name="Radio 1"
+                        value="Radio 1"
+                        size="sm"
+                        variant="success"
+                    />
+                    <sw-radio label="Medium" name="Radio 1" value="Radio 2" />
+                    <sw-radio
+                        label="Large"
+                        name="Radio 1"
+                        value="Radio 3"
+                        size="lg"
+                        variant="danger"
+                    />
+                </sw-input-group>
+            </div>
+        </div>
+
+        <sw-divider class="mb-5 md:mb-8" />
+
+        <div class="mb-8 md:grid md:grid-cols-5 md:gap-4">
+            <div
+                class="text-lg not-italic font-medium leading-5 tracking-wide text-black md:col-span-1 sm:mb-4"
+            >
+               Toggle Switch
+            </div>
+            <div class="md:col-span-2">
+                <sw-input-group label="Switch">
+                    <sw-switch />
+                </sw-input-group>
+            </div>
+        </div>
+
     </sw-card>
   </div>
 </template>

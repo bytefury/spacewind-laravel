@@ -12,20 +12,20 @@
     "devDependencies": {
         "axios": "^0.19",
         "cross-env": "^7.0",
-        "laravel-mix": "^5.0.1",
-        "lodash": "^4.17.19",
         "eslint": "^7.11.0",
         "eslint-config-prettier": "^6.13.0",
         "eslint-loader": "^4.0.2",
         "eslint-plugin-prettier": "^3.1.4",
         "eslint-plugin-vue": "^7.1.0",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.19",
         "resolve-url-loader": "^3.1.0",
-        "vue-template-compiler": "^2.6.12",
         "sass": "^1.22.9",
-        "sass-loader": "7.*"
+        "sass-loader": "7.*",
+        "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
-        "@bytefury/spacewind": "^0.2.6",
+        "@bytefury/spacewind": "^0.2.7",
         "@vue-hero-icons/outline": "^1.6.3",
         "@vue-hero-icons/solid": "^1.6.3",
         "tailwindcss": "^1.9.4",
