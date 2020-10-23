@@ -18,8 +18,14 @@
         Simple alerts to notify about a particular status
       </p>
       <div class="flex py-10 flex-start sm:py-8">
-        <sw-button size="md" variant="primary" @click="onModal">
+        <sw-button size="md" variant="primary" @click="onModal()">
           Regular
+        </sw-button>
+        <sw-button size="md" variant="primary" @click="onModal('lg')">
+          lg
+        </sw-button>
+        <sw-button size="md" variant="primary" @click="onModal('sm')">
+          sm
         </sw-button>
         &nbsp;
       </div>
@@ -38,8 +44,8 @@ export default {
     onClick() {
       alert('Button Clicked')
     },
-    onModal() {
-      this.$root.$emit('openModal')
+    onModal(variant) {
+      this.$root.$emit('openModal', variant)
     }
   }
 }

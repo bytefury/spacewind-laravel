@@ -1,6 +1,6 @@
 <template>
   <div class="h-full template-container">
-    <sw-modal ref="myModal">
+    <sw-modal ref="myModal" :variant="modalVariant">
       <template v-slot:header>
         Title
       </template>
@@ -45,8 +45,14 @@ export default {
     SwHeader,
     SwFooter,
   },
+  data() {
+    return {
+        modalVariant: null
+    }
+  },
   mounted() {
-    this.$root.$on('openModal', () => {
+    this.$root.$on('openModal', (variant) => {
+        this.modalVariant = variant
       this.$refs.myModal.open()
     })
     this.$root.$on('closeModal', () => {
