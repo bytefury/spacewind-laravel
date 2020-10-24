@@ -12,20 +12,17 @@
 
     <sw-card class="md:mt-5">
       <h3 class="py-2 sw-section-title">
-        BASIC ALERTS
+        OPTIONAL SIZES
       </h3>
-      <p class="py-2">
-        Simple alerts to notify about a particular status
-      </p>
-      <div class="flex py-10 flex-start sm:py-8">
-        <sw-button size="md" variant="primary" @click="onModal()">
-          Regular
+      <div class="sm:py-4">
+        <sw-button size="md" variant="primary" @click="onModal('md')" class="m-2 sm:m-0">
+          Medium
         </sw-button>
-        <sw-button size="md" variant="primary" @click="onModal('lg')">
-          lg
+        <sw-button size="md" variant="primary" @click="onModal('lg')" class="m-2 sm:m-0">
+          Large
         </sw-button>
-        <sw-button size="md" variant="primary" @click="onModal('sm')">
-          sm
+        <sw-button size="md" variant="primary" @click="onModal('sm')" class="m-2 sm:m-0">
+          Small
         </sw-button>
         &nbsp;
       </div>
