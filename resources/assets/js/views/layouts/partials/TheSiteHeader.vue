@@ -24,8 +24,8 @@
         href="#"
         class="block ml-3 text-sm text-black bg-white rounded md:hidden focus:text-black visited:text-black active:text-black md:ml-0"
         style="line-height: 9px; padding: 6px"
-        @click="onNavToggle"
       >
+        <!-- @click="onNavToggle" -->
         <div
           class="inline-block m-0 overflow-visible normal-case ease-linear bg-transparent border-0 cursor-pointer hamburger hamburger--arrowturn"
         >
@@ -37,7 +37,7 @@
     </div>
     <ul class="float-right h-8 m-0 list-none" style="height: 36px">
       <li class="relative block float-left px-1 py-0 m-0">
-        <a
+        <!-- <a
           slot="activator"
           href="#"
           data-toggle="dropdown"
@@ -51,7 +51,33 @@
             class="rounded-sm"
             style="width: 36px"
           />
-        </a>
+        </a> -->
+        <sw-dropdown>
+          <a
+            slot="activator"
+            href="#"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            class="inline-block text-sm text-black bg-white rounded-sm avatar"
+          >
+            <img
+              src="/assets/img/default-avatar.jpg"
+              alt="Avatar"
+              class="w-8 h-8 rounded-sm md:h-9 md:w-9"
+            />
+          </a>
+
+          <sw-dropdown-item tag-name="router-link" to="/admin/settings">
+            <!-- <cog-icon class="w-4 h-4 mr-2 text-primary-800" /> -->
+            settings
+          </sw-dropdown-item>
+
+          <sw-dropdown-item @click="logout">
+            <!-- <logout-icon class="w-4 h-4 mr-2 text-primary-800" /> -->
+            logout
+          </sw-dropdown-item>
+        </sw-dropdown>
       </li>
     </ul>
   </div>
@@ -59,9 +85,20 @@
 <script>
 export default {
   methods: {
-    onNavToggle() {
-      this.$utils.toggleSidebar()
-    },
+    // onNavToggle() {
+    //   this.$utils.toggleSidebar()
+    // },
+    logout() {
+         window.axios
+        .get('/logout')
+        .then(() => {
+            this.$router.push('/')
+            window.toastr['success']('Logged out!', 'Success')
+        })
+        .catch((err) => {
+            this.$router.push('/')
+        })
+    }
   }
 }
 </script>
