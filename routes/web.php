@@ -23,3 +23,10 @@ Route::get('/{vue?}', function () {
     return view('app');
 })->where('vue', '[\/\w\.-]*');
 
+Route::get('/login', function () {
+    return view('app');
+})->where('vue', '[\/\w\.-]*');
+
+Route::get('/admin/{vue?}', function () {
+    return view('app');
+})->where('vue', '[\/\w\.-]*')->middleware('redirect-if-unauthenticated');
