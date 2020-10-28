@@ -19,17 +19,13 @@ Route::post('login', LoginController::class);
 
 Route::get('logout', LogoutController::class);
 
-Route::get('/{vue?}', function () {
-    return view('app');
-})->where('vue', '[\/\w\.-]*');
-
 
 // Move other http requests to the Admin Dashboard App
 // -------------------------------------------------
 
 Route::get('/admin/{vue?}', function () {
     return view('app');
-})->where('vue', '[\/\w\.-]*')->name('admin')->middleware(['install', 'redirect-if-unauthenticated']);
+})->where('vue', '[\/\w\.-]*')->name('admin')->middleware(['redirect-if-unauthenticated']);
 
 
 // Move other http requests to the Vue App
@@ -37,4 +33,4 @@ Route::get('/admin/{vue?}', function () {
 
 Route::get('/{vue?}', function () {
     return view('app');
-})->where('vue', '[\/\w\.-]*')->name('login')->middleware(['install', 'guest']);
+})->where('vue', '[\/\w\.-]*')->name('login')->middleware(['guest']);
