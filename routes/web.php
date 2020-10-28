@@ -23,10 +23,18 @@ Route::get('/{vue?}', function () {
     return view('app');
 })->where('vue', '[\/\w\.-]*');
 
-Route::get('/login', function () {
-    return view('app');
-})->where('vue', '[\/\w\.-]*');
+
+// Move other http requests to the Admin Dashboard App
+// -------------------------------------------------
 
 Route::get('/admin/{vue?}', function () {
     return view('app');
-})->where('vue', '[\/\w\.-]*')->middleware('redirect-if-unauthenticated');
+})->where('vue', '[\/\w\.-]*')->name('admin')->middleware(['install', 'redirect-if-unauthenticated']);
+
+
+// Move other http requests to the Vue App
+// -------------------------------------------------
+
+Route::get('/{vue?}', function () {
+    return view('app');
+})->where('vue', '[\/\w\.-]*')->name('login')->middleware(['install', 'guest']);
