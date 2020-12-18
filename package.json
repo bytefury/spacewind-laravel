@@ -1,0 +1,39 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.19",
+        "cross-env": "^7.0",
+        "eslint": "^7.11.0",
+        "eslint-config-prettier": "^6.13.0",
+        "eslint-loader": "^4.0.2",
+        "eslint-plugin-prettier": "^3.1.4",
+        "eslint-plugin-vue": "^7.1.0",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.19",
+        "resolve-url-loader": "^3.1.0",
+        "sass": "^1.22.9",
+        "sass-loader": "7.*",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "@bytefury/spacewind": "^0.3.4",
+        "@tailwindcss/postcss7-compat": "^2.0.2",
+        "@vue-hero-icons/outline": "^1.6.3",
+        "@vue-hero-icons/solid": "^1.6.3",
+        "autoprefixer": "^9.8.6",
+        "postcss": "^7.0.35",
+        "tailwindcss": "^1.9.5",
+        "vue": "^2.6.12",
+        "vue-router": "^3.4.7",
+        "vuex": "^3.5.1"
+    }
+}
